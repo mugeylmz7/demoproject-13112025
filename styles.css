@@ -1,0 +1,759 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-bg: #FAF8F6;;
+  --color-primary: #734b4b;
+  --color-secondary:#533636;
+  --color-white: #ffffff;
+  --color-black: #2e2a28;
+  --color-grey: #5f5a58;
+  --color-pink: #f4cfcc;
+  
+
+  --font-family: "Roboto", sans-serif;
+
+  --text-xs: 14px;
+  --text-sm: 15px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;        
+  --text-3xl: 32px;
+  --text-4xl: 48px;
+  --text-5xl: 72px;
+
+  --max-content: 1151px;
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+
+nav {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.nav__title {
+  margin: 0 75px;
+  color: var(--color-primary);
+  opacity: 0.8;
+  font-size: var(--text-2xl);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.6px;
+}
+
+
+.nav__title__list {
+  display: flex;
+  padding: 0;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.nav img {
+  width: 80px;
+  height: 80px;
+}
+
+
+.nav__menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 75px;
+}
+
+
+.nav__list {
+  display: flex;
+  padding: 0 35px;
+  gap: 35px;
+  color: var(--color-grey);
+  opacity: 0.80;
+  font-size: var(--text-md);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+.nav__auth{
+  color: var(--color-white);
+  font-size: var(--text-xs);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+picture,
+img {
+  max-width: 100%;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+nav a:hover {
+  text-decoration: underline;
+  color: var(--color-black);
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+main {
+  background-image: url("https://images.unsplash.com/photo-1747239685045-fcbcf98985db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4px);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+}
+
+
+h1 {
+  margin:0;
+  font-size: var(--text-5xl);
+  color: var(--color-pink);
+  opacity: 0.8;
+  font-weight: 400;
+  line-height: 90px;
+}
+
+
+main p {
+  margin: 24px auto;
+  font-size: var(--text-md);
+  color: var(--color-white);
+  opacity: 0.8;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-xs);
+  font-weight: 400;
+  line-height: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+}
+
+
+.btn-primary {
+  background-color: var(--color-primary);
+  opacity: 0.8;
+  color: var(--color-white);
+}
+
+
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  text-decoration: underline;
+  color: var(--color-white);
+}
+
+
+.btn-secondary {
+  width: 180px;
+  height: 40px;
+  background: var(--color-primary);
+  opacity: 0.8;
+  color: var(--color-white);
+}
+
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.btn-secondary-outlined {
+  width: 180px;
+  height: 40px;
+  gap: 10px;
+  background: var(--color-white);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  opacity: 0.8;
+}
+
+
+.btn-secondary-outlined:hover {
+  background-color: var(--color-pink);
+  opacity:0.70;
+  text-decoration: underline;
+}
+
+
+section {
+  align-items: center;
+  gap: 64px;
+  margin: 64px auto;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--max-content);
+  gap: 84px;
+  margin: 128px auto;
+}
+
+
+.about__content {
+  flex: 0 0 70%;
+  max-width: 50vh;
+}
+
+
+.about__picture {
+  flex: 0 0 30%;
+  max-width: 50vh;
+}
+
+
+h2 {
+  margin: 0;
+  font-size: var(--text-3xl);
+  color: var(--color-black);
+  opacity: 0.75;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+
+p {
+  margin-bottom: 24px;
+  color: var(--color-grey);
+  font-size: var(--text-md);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.25px;
+}
+
+
+/* --- DERS KARTLARI BÖLÜMÜ --- */
+
+.classes__container {
+  max-width: var(--max-content);
+  margin: 128px auto;
+  text-align: center;
+}
+
+
+.classes {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.class__card {
+  flex: 1; 
+  max-width: 45%; /* İki kartın yan yana sığması için */
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.class__card img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover; 
+}
+
+
+.class__content {
+  padding: 20px;
+}
+
+
+.class__card h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+  opacity: 0.8;
+  font-size: var(--text-xl);
+}
+
+
+
+
+/* --- EĞİTMENLER BÖLÜMÜ --- */
+
+.instructors__container {
+  max-width: var(--max-content);
+  margin: 128px auto;
+  /* padding: 0 20px; */
+  text-align: center;
+}
+
+/* Kartların yatayda hizalanması için Flexbox (classes__cards ile aynı) */
+.instructors {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Eğitmen kartlarının stili (class__card ile aynı) */
+.instructor__card {
+  flex: 1;
+  max-width: 45%;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.instructor__card img {
+  width: 100%; 
+  height: 70vh; 
+  object-fit: cover;
+}
+
+
+.instructor__content {
+  padding: 20px;
+}
+
+
+.instructor__card h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+  opacity: 0.8;
+  font-size: var(--text-xl);
+}
+
+
+
+
+
+/* --- YORUMLAR BÖLÜMÜ --- */
+
+.reviews__container {
+  max-width: var(--max-content);
+  margin: 128px auto;
+  /* padding: 0 20px; */
+  text-align: center;
+}
+
+
+/* reviews: Yorum kartlarını yan yana dizmek için Flex Container */
+.reviews {
+  display: flex;
+  flex-direction: row;
+  gap: 35px; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+
+
+.reviews__card {
+  flex: 1; 
+  max-width: 30%; /* Üç kartın yan yana sığması için */
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.review__quote {
+  font-size: var(--text-md);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey);
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+
+.review__author {
+  border-top: 1px solid rgba(139, 134, 131, 0.2); /* Yazar bilgisinin üstüne çizgi */
+  padding-top: 16px;
+}
+
+
+.review__author__name {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  font-style: normal;
+  line-height: 30px;
+  color: var(--color-primary);
+  opacity: 0.9;
+  margin: 0;
+}
+
+
+.review__author__details {
+  font-size: var(--text-xs);
+  color: var(--color-grey);
+  opacity: 0.80;
+  margin: 0;
+}
+
+
+
+
+
+/* --- İLETİŞİM FORMU BÖLÜMÜ --- */
+
+.contact__container {
+  max-width: var(--max-content);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 128px;
+  flex-wrap: wrap;
+  margin: 128px auto;
+  text-align: center;
+}
+
+
+.contact__form {
+  flex: 0 0 45%; /* Formun, .contact__container içindeki SÜTUN genişliği */
+}
+
+
+.contact__form h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%; /* İki inputun yan yana gelmesini sağlar (45% + 45% + 20px gap) */
+  text-align: left;
+}
+
+
+.form__group__full {
+  flex: 1 1 100%; /* Mesaj kutusu ve butonun tam genişlik almasını sağlar */
+}
+
+
+.form__group__checkbox {
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--text-md);
+}
+
+
+.form__group__checkbox input {
+  margin-right: 10px;
+}
+
+
+.contact__form__label {
+  font-size: var(--text-md);
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--color-grey);
+}
+
+
+.contact__form__input,
+.contact__form__textarea {
+  padding: 10px;
+  border: 1px solid var(--color-grey);
+  opacity: 0.80;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: var(--text-md);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.contact__form__textarea {
+  resize: vertical; 
+  min-height: 100px;
+}
+
+
+.contact__form__submit {
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.contact__info {
+  flex: 0 0 35%;
+  max-width: 400px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+
+.info__card {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: 40px;
+  padding: 15px;
+  border: 1px solid rgba(139, 134, 131, 0.1);
+  border-radius: 8px;
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.info__card h3 {
+  margin-top: 0;
+  margin-left: 10px;
+  font-size: var(--text-lg);
+  color: var(--color-black);
+  opacity: 0.8;
+}
+
+
+.info__card p {
+  margin: 0 0 0 10px;
+  font-size: var(--text-md);
+  color: var(--color-grey);
+  opacity: 0.8;
+}
+
+
+/* İkon Stilleri (Material Symbols için) */
+.info__card .material-symbols-outlined {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+
+
+.info__card .info__text h3 {
+  color: var(--color-black);
+  opacity: 0.80;
+  font-size: var(--text-lg);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+
+.info__card .info__text a {
+  text-decoration: none;
+  color: var(--color-grey);
+  opacity: 0.80;
+  font-size: var(--text-md);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.5px;
+}
+
+
+
+
+
+/* --- FOOTER BÖLÜMÜ --- */
+
+footer {
+  background-color: var(--color-pink);
+  opacity: 0.4; 
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+
+.footer__container {
+  max-width: var(--max-content);
+  text-align: baseline;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.footer__column {
+  flex: 1 1 180px; /* Sütun genişliği */
+}
+
+
+.footer__brand {
+  flex: 1 1 300px;
+}
+
+
+.footer__brand__title {
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 36px; 
+  letter-spacing: 0.6px;
+  color:var(--color-secondary);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+footer p {
+  color:var(--color-grey);
+  font-size: var(--text-md);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.5px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+
+.footer__address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+
+.footer__address .material-symbols-outlined {
+  font-size: var(--text-lg); 
+}
+
+
+/* Sütun Başlıkları */
+.footer__column h4 {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-black);
+  opacity: 0.75;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.footer__list li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-grey);
+}
+
+
+.footer__list li:hover {
+  color: var(--color-black);
+  text-decoration: none; 
+}
+
+
+.footer__list li a {
+    display: flex;       
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Telefon İkonunun Rengi ve Boyutu */
+.footer__list li .material-symbols-outlined {
+  font-size: var(--text-xl); 
+  color: var(--color-grey); 
+}
+
+
+.footer__list a { 
+  text-decoration: none;
+  color: var(--color-grey);
+}
+
+
+.footer__list a:hover {
+  color: var(--color-black);
+  text-decoration: none; 
+}
+
+
+/* Alt Telif Hakkı ve Sosyal Medya Bölümü */
+.footer__bottom {
+  max-width: var(--max-content);
+}
+
+
+.footer__bottom p {
+  font-size: var(--text-xs);
+}
+

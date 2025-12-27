@@ -34,13 +34,20 @@ body {
   font-family: var(--font-family);
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
 
+/* Navigasyonun mobilde üzerinde açılabilmesi için relative */
 nav {
   background-color: var(--color-bg);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 
@@ -325,8 +332,6 @@ p {
 }
 
 
-
-
 /* --- EĞİTMENLER BÖLÜMÜ --- */
 
 .instructors__container {
@@ -377,9 +382,6 @@ p {
 }
 
 
-
-
-
 /* --- YORUMLAR BÖLÜMÜ --- */
 
 .reviews__container {
@@ -423,12 +425,14 @@ p {
   color: var(--color-grey);
   margin-top: 8px;
   margin-bottom: 16px;
+  margin-left: 8px;
 }
 
 
 .review__author {
   border-top: 1px solid rgba(139, 134, 131, 0.2); /* Yazar bilgisinin üstüne çizgi */
   padding-top: 16px;
+  padding-left: 8px;
 }
 
 
@@ -440,6 +444,7 @@ p {
   color: var(--color-primary);
   opacity: 0.9;
   margin: 0;
+  padding-left: 4px;
 }
 
 
@@ -448,10 +453,9 @@ p {
   color: var(--color-grey);
   opacity: 0.80;
   margin: 0;
+  padding-left: 4px;
+  padding-bottom: 8px;
 }
-
-
-
 
 
 /* --- İLETİŞİM FORMU BÖLÜMÜ --- */
@@ -616,9 +620,6 @@ form {
 }
 
 
-
-
-
 /* --- FOOTER BÖLÜMÜ --- */
 
 footer {
@@ -757,3 +758,176 @@ footer p {
   font-size: var(--text-xs);
 }
 
+
+
+
+
+/* =========================================
+   RESPONSIVE TASARIM (MEDYA SORGULARI)
+   ========================================= */
+
+/* --- Tablet ve Küçük Laptoplar --- */
+@media screen and (min-width: 640px) and (max-width: 1023.98px) {
+  
+  :root {
+    --text-5xl: 56px;
+    --text-3xl: 28px;
+  }
+
+
+  .nav__title, 
+  .nav__menu {
+    margin: 0 20px;
+    padding: 0;
+  }
+
+
+  .about, 
+  .classes__container, 
+  .instructors__container, 
+  .reviews__container, 
+  .contact__container {
+    margin: 64px 20px;
+    padding: 0 20px;
+  }
+  
+
+  .class__card, 
+  .instructor__card,
+  .reviews__card {
+    max-width: 48%; /* İkişerli dizilim */
+  }
+  
+
+  .footer__container {
+    width: 85%;
+  }
+}
+
+
+
+
+/* --- Mobil Cihazlar --- */
+@media screen and (max-width: 639.98px) {
+  :root {
+    --text-5xl: 36px; /* Mobilde başlık daha küçük olmalı */
+    --text-2xl: 20px;
+    --text-xl: 18px;
+  }
+
+
+  .hamburger {
+    display: block;
+    color: var(--color-primary);
+  }
+
+
+  .hamburger span {
+    font-size: 32px;
+  }
+
+
+  .nav__menu {
+    display: none; /* Menü varsayılan olarak gizli */
+  }
+
+
+  .nav__title {
+    margin: 0 20px;
+  }
+
+
+  h1 {
+    line-height: 1.2;
+    padding: 0 10px;
+  }
+
+
+  .hero, 
+  .about, 
+  .classes, 
+  .instructors, 
+  .reviews {
+    flex-direction: column;
+    margin: 0;
+  }
+
+
+  .classes__container,
+  .instructors__container,
+  .reviews__container,
+  .contact__container, 
+  .footer__container {
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 0;
+  }
+
+ 
+  .class__card, 
+  .instructor__card, 
+  .reviews__card, 
+  .contact__form, 
+  .btn-secondary, 
+  .btn-secondary-outlined {
+    max-width: 100%;
+    margin: 0 40px;
+  }
+
+
+  .about__content, 
+  .about__picture {
+    /* flex: 0 0 70%; */
+    max-width: 80%;
+    text-align: center;
+  }
+
+
+  .class__card img, 
+  .instructor__card img {
+    height: 300px; /* Mobilde çok yüksek olmasın */
+  }
+
+
+  .contact__form, 
+  .contact__info {
+    max-width: 80%;
+    margin:0;
+  }
+ 
+  
+  .contact__info {
+    width: 100%;
+    padding: 20px;
+  }
+
+
+  .info__card {
+    margin-top: 0;
+    margin-bottom:40px;
+  }
+
+
+  .footer__container {
+    width: 100%;
+    padding: 0;
+    margin:0;
+    text-align: center;
+    gap: 40px;
+  }
+
+
+  .footer__address {
+    justify-content: center;
+  }
+  
+
+  .footer__list li {
+    justify-content: center;
+  }
+  
+
+  .footer__column {
+    flex: 1 1 auto;
+  }
+}
